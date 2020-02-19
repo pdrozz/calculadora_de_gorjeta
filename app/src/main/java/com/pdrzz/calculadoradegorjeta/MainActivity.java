@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             double valorDigitado=Double.parseDouble(valorRecuperado);
             double gorjeta=valorDigitado*(porcentagem/100);
             textGorjeta.setText("R$ "+Math.round(gorjeta));
-            double total=valorDigitado+gorjeta;
+            double total=valorDigitado+Math.round(gorjeta);
             textTotal.setText("R$ "+total);
 
 
@@ -54,6 +54,7 @@ public void listenerSeek(){
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 porcentagem=progress;
                 textPorcentagem.setText(Math.round(porcentagem)+" %");
+                calcular();
             }
 
             @Override

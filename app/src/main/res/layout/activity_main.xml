@@ -45,25 +45,26 @@
 
     <TextView
         android:id="@+id/textGorjeta"
-        android:layout_width="289dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
         android:background="@color/laranja"
         android:text="R$ 0.00"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-        app:layout_constraintStart_toEndOf="@+id/textView3" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
 
     <TextView
         android:id="@+id/textTotal"
-        android:layout_width="289dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/laranja"
         android:text="R$ 0.00"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3" />
+        app:layout_constraintEnd_toEndOf="@+id/textGorjeta"
+        app:layout_constraintStart_toStartOf="@+id/textGorjeta" />
 
     <TextView
         android:id="@+id/textView3"
@@ -72,7 +73,7 @@
         android:layout_marginTop="16dp"
         android:text="Gorjeta"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textPorcentagem"
         app:layout_constraintTop_toBottomOf="@+id/textPorcentagem" />
 
     <TextView
@@ -82,7 +83,7 @@
         android:layout_marginTop="16dp"
         android:text="Total"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textPorcentagem"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <SeekBar
@@ -94,4 +95,11 @@
         app:layout_constraintEnd_toEndOf="@+id/textGorjeta"
         app:layout_constraintStart_toStartOf="@+id/textGorjeta"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
 </androidx.constraintlayout.widget.ConstraintLayout>
